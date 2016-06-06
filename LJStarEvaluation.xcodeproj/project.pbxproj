@@ -15,7 +15,6 @@
 		83BFD2FD1ADCA54700534F57 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BFD2FB1ADCA54700534F57 /* LaunchScreen.xib */; };
 		83BFD3091ADCA54700534F57 /* LJStarEvaluationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BFD3081ADCA54700534F57 /* LJStarEvaluationTests.m */; };
 		83BFD3141ADCA56800534F57 /* LJStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BFD3131ADCA56800534F57 /* LJStarView.m */; };
-		83BFD3161ADCA68900534F57 /* LJStarImg.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 83BFD3151ADCA68900534F57 /* LJStarImg.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +43,6 @@
 		83BFD3081ADCA54700534F57 /* LJStarEvaluationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJStarEvaluationTests.m; sourceTree = "<group>"; };
 		83BFD3121ADCA56800534F57 /* LJStarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LJStarView.h; sourceTree = "<group>"; };
 		83BFD3131ADCA56800534F57 /* LJStarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LJStarView.m; sourceTree = "<group>"; };
-		83BFD3151ADCA68900534F57 /* LJStarImg.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = LJStarImg.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +88,6 @@
 				83BFD2F11ADCA54700534F57 /* AppDelegate.m */,
 				83BFD2F91ADCA54700534F57 /* Images.xcassets */,
 				83BFD2FB1ADCA54700534F57 /* LaunchScreen.xib */,
-				83BFD3151ADCA68900534F57 /* LJStarImg.bundle */,
 				83BFD3121ADCA56800534F57 /* LJStarView.h */,
 				83BFD3131ADCA56800534F57 /* LJStarView.m */,
 				83BFD2F31ADCA54700534F57 /* ViewController.h */,
@@ -209,7 +206,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				83BFD2F81ADCA54700534F57 /* Main.storyboard in Resources */,
-				83BFD3161ADCA68900534F57 /* LJStarImg.bundle in Resources */,
 				83BFD2FD1ADCA54700534F57 /* LaunchScreen.xib in Resources */,
 				83BFD2FA1ADCA54700534F57 /* Images.xcassets in Resources */,
 			);

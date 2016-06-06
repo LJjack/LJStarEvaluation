@@ -19,8 +19,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     LJStarView *starView = [[LJStarView alloc] initWithFrame:CGRectMake(20, 150, 234, 47)];
     [starView setDelegate:self];
-NSArray*path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask,YES);
-    NSLog(@"%@",path[0]);
     [self.view addSubview:starView];
 }
 - (void)starView:(LJStarView *)starView selecedStar:(NSString *)numStr
