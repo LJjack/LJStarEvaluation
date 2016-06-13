@@ -51,9 +51,13 @@
             fullImgView.frame = frame;
         }
         self.bgView.frame = self.bounds;
+        //初步布局核心代码
         NSInteger zs = floor(self.selectedStarNum);
         CGFloat xs = self.selectedStarNum - zs;
-        CGFloat foreViewWidth = CGRectGetMinX(self.foreView.subviews[zs].frame) + CGRectGetWidth(self.foreView.subviews[zs].frame)*xs;
+        CGFloat foreViewWidth = CGRectGetMaxX(self.foreView.subviews.lastObject.frame);
+        if (zs < self.totolStarNum) {
+            foreViewWidth = CGRectGetMinX(self.foreView.subviews[zs].frame) + CGRectGetWidth(self.foreView.subviews[zs].frame)*xs;
+        }
         self.foreView.frame = CGRectMake(0, 0, foreViewWidth, self.frame.size.height);
         CGRect frame = self.frame;
         frame.size.width = CGRectGetMaxX(self.bgView.subviews.lastObject.frame);
@@ -73,7 +77,6 @@
     [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gesture:)]];
     //拖动
     [self addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(gesture:)]];
-    [self setBackgroundColor:[UIColor greenColor]];
 }
 
 - (UIView *)createImgViewWithImg:(UIImage *)img {
@@ -112,6 +115,11 @@
 }
 
 #pragma mark - Getters And Setters
+
+- (void)setSelectedStarNum:(CGFloat)selectedStarNum {
+    _selectedStarNum = selectedStarNum;
+    NSAssert(selectedStarNum<self.totolStarNum, @"选择的星数大于最大星数");
+}
 
 - (void)setScrollEffect:(BOOL)scrollEffect {
     _scrollEffect = scrollEffect;
