@@ -37,6 +37,10 @@
  */
 @property (nonatomic, strong) UIImage *fullImg;
 /**
+ *  星之间的间隔, 默认是 8.
+ */
+@property (nonatomic, assign) CGFloat starSpace;
+/**
  *  代理 scrollEffect 必须是 YES 才能使用
  */
 @property(nonatomic, weak) id<LJStarViewDelegate> delegate;
