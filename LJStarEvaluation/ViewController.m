@@ -20,14 +20,13 @@
     LJStarView *starView = [[LJStarView alloc] init];
     starView.frame = CGRectMake(20, 150, 390, 44);
     starView.selectedStarNum = 1.5;
-    starView.scrollEffect = NO;
+    starView.scrollEffect = YES;
     starView.emptyImg = [UIImage imageNamed:@"tasty_big_star_normal"];
     starView.fullImg = [UIImage imageNamed:@"tasty_big_star_select"];
     [starView setDelegate:self];
     [self.view addSubview:starView];
 }
-- (void)starView:(LJStarView *)starView selecedStar:(NSString *)numStr
-{
+- (void)starView:(LJStarView *)starView selecedStar:(NSString *)numStr {
     NSLog(@"%@",numStr);
 }
 - (void)didReceiveMemoryWarning {

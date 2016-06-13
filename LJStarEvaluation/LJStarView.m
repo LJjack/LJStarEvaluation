@@ -20,7 +20,6 @@ CGFloat const kStarSpace = 10.f;
 
 @implementation LJStarView
 
-
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         self.totolStarNum = 5;
@@ -93,18 +92,26 @@ CGFloat const kStarSpace = 10.f;
 #pragma mark - Action
 
 - (void)gesture:(UIGestureRecognizer *)ges {
-//    CGFloat x = [ges locationInView:ges.view].x;
-//    if (x < 0) return;
-//    CGRect frame = _fullImgView.frame;
-//    frame.size.width = x;
-//    _fullImgView.frame = frame;
-//    if (ges.state == UIGestureRecognizerStateEnded) {
-//        NSString *numStr = [NSString stringWithFormat:@"%.1f",(x/self.frame.size.width)*5.0];
-//       if ([_delegate respondsToSelector:@selector(starView:selecedStar:)]) {
-//            [_delegate starView:self selecedStar:numStr];
-//        }
-//        
-//    }
+    CGFloat x = [ges locationInView:ges.view].x;
+    if (x < 0) return;
+    CGFloat seleNum = 0.;
+    self.foreView.frame = CGRectMake(0, 0, x, self.frame.size.height);
+    CGFloat imgWidth = self.foreView.subviews[0].frame.size.width;
+    CGFloat t = imgWidth + kStarSpace;
+    
+    seleNum = floor(x/t);
+    x = x - seleNum*t;
+    seleNum += x/imgWidth;
+    
+    
+    
+    if (ges.state == UIGestureRecognizerStateEnded) {
+        NSString *numStr = [NSString stringWithFormat:@"%.1f",seleNum];
+       if ([_delegate respondsToSelector:@selector(starView:selecedStar:)]) {
+            [_delegate starView:self selecedStar:numStr];
+        }
+        
+    }
 }
 
 #pragma mark - Getters And Setters

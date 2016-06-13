@@ -23,7 +23,7 @@
 /**
  *  星星的总个数, 默认5个
  */
-@property (nonatomic, assign) NSInteger totolStarNum;
+@property (nonatomic, assign) NSUInteger totolStarNum;
 /**
  *  选中星星的个数是 [0.0, totolStarNum], 默认是 0.0f
  */
