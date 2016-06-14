@@ -20,20 +20,6 @@
                ReferencedContainer = "container:LJStarEvaluation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "83BFD3011ADCA54700534F57"
-               BuildableName = "LJStarEvaluationTests.xctest"
-               BlueprintName = "LJStarEvaluationTests"
-               ReferencedContainer = "container:LJStarEvaluation.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
